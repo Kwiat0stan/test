@@ -10,22 +10,35 @@ int main()
     scanf(" %c", &operator);
     printf("Enter the second number: ");
     scanf("%d", &num2);
-    switch(operator)
+    int i = 0;
+    do
     {
-        case '+':
-            printf("Twoja liczba to: %d.", num + num2);
-            break;
-        case '-':
-            printf("Twoja liczba to: %d.", num - num2);
-            break;
-        case '*':
-            printf("Twoja liczba to: %d.", num * num2);
-            break;
-        case '/':
-            printf("Twoja liczba to: %d.", num / num2);
-        default:
-            break;
-    }
+        switch(operator)
+        {
+            case '+':
+                printf("Twoja liczba to: %d.", num + num2);
+                i = 0;
+                break;
+            case '-':
+                printf("Twoja liczba to: %d.", num - num2);
+                i = 0;
+                break;
+            case '*':
+                printf("Twoja liczba to: %d.", num * num2);
+                i = 0;
+                break;
+            case '/':
+                printf("Twoja liczba to: %d.", num / num2);
+                i = 0;
+                break;
+            default:
+                printf("Enter operator, try again: ");
+                scanf("%c", &operator);
+                i = 1;
+                break;
+        }    
+    }while(i == 1);
     printf("\n");
+    
     return 0;
 }
